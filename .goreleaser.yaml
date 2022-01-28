@@ -23,7 +23,7 @@ archives:
 checksum:
   name_template: 'checksums.txt'
 snapshot:
-  name_template: "v1.0-snapshot"
+  name_template: "v1.1-snapshot"
 changelog:
   sort: asc
   filters:
