@@ -1,11 +1,8 @@
 # MD5Dog
 
-Crack md5(password.salt) 
-
-Usage:  
+MD5Dog - Use Golang to Crack Hash
 
 ```
-    MD5Dog - Use Golang to Crack Hash
     
     Options:
       -H, --hash <data>             Hash value
