@@ -13,8 +13,7 @@ MD5Dog - Use Golang to Crack Hash
     
     Usage:
     *md5(password.salt):
-            Example: MD5Dog.exe -t 10 -c 1000 -s abc -H 1b7ff998949c08bfa0d399d41aa0
-    cbdf -p dic\pass.txt
+            Example: MD5Dog.exe -t 10 -c 1000 -s abc -H 1b7ff998949c08bfa0d399d41aa0cbdf -p dic\pass.txt
     *hmac.md5(password) ;secret=md5(password):
             Example: MD5Dog.exe -t 20 -c 1000 -H 92d858ce796c86d55090ce1f1bb7be9a -p dic\pass.txt
 
