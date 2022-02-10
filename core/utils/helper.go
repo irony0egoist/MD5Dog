@@ -59,3 +59,14 @@ func LineCounter(path string) (int, error) {
 
 	return count, nil
 }
+
+func Output(line string) {
+	f := "success.log"
+	fl, err := os.OpenFile(f, os.O_APPEND|os.O_CREATE, 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer fl.Close()
+	_, _ = fl.Write([]byte(line + "\n\n"))
+	log.Println("output: " + f)
+}

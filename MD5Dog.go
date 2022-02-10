@@ -99,6 +99,7 @@ func bruteHash(words chan string, salt, hash string, hashType HashType) {
 		rst := fmt.Sprintf("%x", md5.Sum([]byte(wordTrim+salt)))
 		if rst == strings.ToLower(hash) {
 			log.Printf("successful: %s\n", wordTrim)
+			utils.Output(fmt.Sprintf("%s:%s:%s", hash, salt, wordTrim))
 		}
 	} else if hashType == hmacMd5 {
 		secret := fmt.Sprintf("%x", md5.Sum([]byte(wordTrim)))
@@ -107,6 +108,7 @@ func bruteHash(words chan string, salt, hash string, hashType HashType) {
 		rst := hex.EncodeToString(h.Sum(nil))
 		if rst == strings.ToLower(hash) {
 			log.Printf("successful: %s\n", wordTrim)
+			utils.Output(fmt.Sprintf("%s:%s:%s", hash, salt, wordTrim))
 		}
 	} else {
 		log.Fatal("hash type not support")
